@@ -1,0 +1,15 @@
+.todo-container{
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    width: 90%;
+    border-radius: 10px;
+}
+h2{
+    margin: 10px;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+}
+.todo-container>p{
+    margin: 10px;
+}
