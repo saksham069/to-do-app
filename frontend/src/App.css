@@ -1,7 +1,7 @@
 body {
   background-color: black;
   display: flex;
-  height: 95vh;
+  height: 95vh; /*workaround*/
   justify-content: center;
   align-items: center;
 }

@@ -17,7 +17,7 @@ const App = () => {
             <input type="text" name="title" />
           </div>
           <div className="item">
-            <button type="submit">✔️</button>
+            <button type="submit" id="new-to-do">✔️</button>
           </div>
         </div>
         <hr />

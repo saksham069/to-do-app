@@ -10,6 +10,6 @@ h2{
     margin-bottom: 0;
     font-size: 1.5rem;
 }
-.todo-container>p{
-    margin: 10px;
+.todo-container, .todo-container>*{
+    margin: 5px;
 }
