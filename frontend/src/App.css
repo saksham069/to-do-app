@@ -16,13 +16,12 @@ h1 {
   width: 80vh;
   height: 50vh;
 }
-.input-div {
+.input {
   padding: 5%;
   padding-bottom: 0%;
   height: 20%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  flex-direction: row;
 }
 .item {
   display: flex;

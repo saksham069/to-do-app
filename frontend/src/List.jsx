@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ToDoItem from "./ToDoItem";
 
-let items = [
-  <ToDoItem title="test 1" desc="do this thing" />,
-];
-
-$("#new-to-do").on("click", () => {
-  items.push(<ToDoItem />); // use state hook
-});
-
 const List = () => {
+  const [items, setItems] = useState([]);
+
+  fetch("/data").then((res) => {
+    res.json().then((data) => {
+      setItems(data);
+      console.log(items);
+    });
+  });
+
   return (
     <div
       style={{
@@ -21,7 +22,9 @@ const List = () => {
       }}
     >
       {/* keys bhi add krni hai */}
-      {...items}
+      {items.map((i) => (
+        <ToDoItem {...i} />
+      ))}
     </div>
   );
 };
