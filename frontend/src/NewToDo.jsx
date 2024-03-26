@@ -6,10 +6,18 @@ const NewToDo = () => {
   const [desc, setDesc] = useState("");
 
   return (
-    <form /*ni samajh aara how ot not refresh or redirect*/
+    <form
       className="input"
-      action="/submit"
-      method="POST"
+      id="input-form"
+      // action="/submit"
+      // method="POST"
+      onSubmit={(e) => {
+        e.preventDefault();
+        const formData = new FormData();
+        formData.append("title", title);
+        formData.append("desc", desc);
+        fetch("/submit", { method: "POST", body: formData });
+      }}
     >
       <div className="item">
         <label for="title">Title</label>

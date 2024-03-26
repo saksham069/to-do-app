@@ -4,12 +4,14 @@ import ToDoItem from "./ToDoItem";
 const List = () => {
   const [items, setItems] = useState([]);
 
-  fetch("/data").then((res) => {
-    res.json().then((data) => {
-      setItems(data);
-      console.log(items);
+  useEffect(() => {
+    fetch("/data").then((res) => {
+      res.json().then((data) => {
+        setItems(data);
+        console.log(items);
+      });
     });
-  });
+  }, []);
 
   return (
     <div

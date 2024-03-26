@@ -18,11 +18,11 @@ app.get("/data", async (req, res) => {
 });
 
 app.post("/submit", (req, res) => {
+  console.log(req.body);
   newToDo(
-    req.body.title.trimStart().trimEnd(),
+    req.body["title"].trimStart().trimEnd(),
     req.body.desc.trimStart().trimEnd()
   );
-  res.redirect("/");
 });
 
 app.listen(port, () => {
